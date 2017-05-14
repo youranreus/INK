@@ -11,8 +11,8 @@ p{
 html{}
 strong{color:#FF706C}
 a{text-decoration:none;color:#999;-webkit-transition:all .24s ease;
-transition:all .24s ease;}  
-a:hover{color:skyblue;} 
+transition:all .24s ease;}
+a:hover{color:skyblue;}
 ::selection {
     background-color: black;
     color: white;
@@ -112,7 +112,7 @@ transition:all .24s ease;
 .post a{
 	color:skyblue;
 }
-.post a:visited{color:skyblue;} 
+.post a:visited{color:skyblue;}
 .post em{color:#87ceeb;}
 .post em:before{content:'「';color:#87ceeb;}
 .post em:after{content:'」';color:#87ceeb;}
@@ -150,7 +150,7 @@ blockquote{
 }
 
 .post li{
-    
+
     transition: .12s;
 }
 .post p{
@@ -233,16 +233,19 @@ border: 1px solid #999;
 #archives ul{
 list-style-type:none;
 }
-#archives ul li a{
-color:black;
+#archives a:hover {
+    background: gray;
+    color: white;
 }
-#archives ul li{
-  margin-top:0.5em;
-  line-height: 2em;
-padding: 5px;
-}
-.list-item{
-border-bottom: 2px dotted #999;;
+#archives a {
+    position: relative;
+    display: block;
+    padding: .625rem;
+    color: #333;
+    font-style: normal;
+    line-height: 1.125rem;
+    font-size: 1rem;
+    border-radius: .25rem;
 }
 
 /*评论~*/

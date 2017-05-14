@@ -34,22 +34,22 @@
 		$year_tmp = date('Y',$archives->created);
 		$mon_tmp = date('m',$archives->created);
 		$y=$year; $m=$mon;
-		if ($mon != $mon_tmp && $mon > 0) $output .= '</ul></li>';
-		if ($year != $year_tmp && $year > 0) $output .= '</ul>';
-		if ($year != $year_tmp) {
+    if ($year != $year_tmp) {
 			$year = $year_tmp;
-			$output .= '<h3>'. $year .' 年</h3><ul>'; //输出年份
+      $output .= '<p style="font-size:1.3em;">'. $year .' 年</p><ul>'; //输出月份
 		}
+		//if ($mon != $mon_tmp && $mon > 0) $output .= '</ul></li>';
 		if ($mon != $mon_tmp) {
 			$mon = $mon_tmp;
-			$output .= '<li><span>'. $mon .' 月</span><ul>'; //输出月份
+			//$output .= '<li>'. $mon .' 月<ul>'; //输出月份
 		}
-		$output .= '<li class="list-item">'.date('d日: ',$archives->created).'<a href="'.$archives->permalink .'">'. $archives->title .'</a> <em>('. $archives->commentsNum.')</em></li>'; //输出文章日期和标题
+		$output .= '<li><a href="'.$archives->permalink .'">「'. $mon.'-'.date('d」',$archives->created).''. $archives->title .'<em style="color:#FF706C;">'.$archives->commentsNum.'条评论</em></a> </li>'; //输出文章日期和标题
 	endwhile;
-	$output .= '</ul></li></ul></div>';
+	$output .= '</ul>';
 	echo $output;
 ?>
 
   </div>
+</div>
 </div>
 <?php $this->need('footer.php'); ?>
