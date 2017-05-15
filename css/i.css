@@ -120,7 +120,7 @@ transition:all .24s ease;
 	text-align:left;
 	line-height:1em;
 }
-code{
+.post p code{
 	display: -webkit-inline-box;
     background: #333;
     color: #FFF;
@@ -229,6 +229,24 @@ border: 1px solid #999;
   background-color: black;
   border-radius: 5px;
   color:white;
+}
+#GD-year{
+  font-size: 1.3em;
+}
+#GD-year::before{
+  content: '[';
+  color: gray;
+}
+#GD-year::after{
+  content: ']';
+  color: gray;
+}
+#GD-month{
+  font-size: 1.1em;
+}
+#GD-month::before{
+  content: '>';
+  color: green;
 }
 #archives ul{
 list-style-type:none;

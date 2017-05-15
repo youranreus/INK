@@ -34,22 +34,23 @@
 		$year_tmp = date('Y',$archives->created);
 		$mon_tmp = date('m',$archives->created);
 		$y=$year; $m=$mon;
-    if ($year != $year_tmp) {
+		if ($mon != $mon_tmp && $mon > 0) $output .= '</ul></li>';
+		if ($year != $year_tmp && $year > 0) $output .= '</ul>';
+		if ($year != $year_tmp) {
 			$year = $year_tmp;
-      $output .= '<p style="font-size:1.3em;">'. $year .' 年</p><ul>'; //输出月份
+			$output .= '<p id="GD-year">'. $year .' 年</p><ul>'; //输出年份
 		}
-		//if ($mon != $mon_tmp && $mon > 0) $output .= '</ul></li>';
 		if ($mon != $mon_tmp) {
 			$mon = $mon_tmp;
-			//$output .= '<li>'. $mon .' 月<ul>'; //输出月份
+			$output .= '<li><p id="GD-month">'. $mon .' 月</p><ul>'; //输出月份
 		}
-		$output .= '<li><a href="'.$archives->permalink .'">「'. $mon.'-'.date('d」',$archives->created).''. $archives->title .'<em style="color:#FF706C;">'.$archives->commentsNum.'条评论</em></a> </li>'; //输出文章日期和标题
+		$output .= '<li><a href="'.$archives->permalink .'">'. $archives->title .'<em style="color:#FF706C;">('. $archives->commentsNum.')</em></a></li>'; //输出文章日期和标题
 	endwhile;
-	$output .= '</ul>';
+	$output .= '</ul></li></ul></div>';
 	echo $output;
+  //'.date('d日: ',$archives->created).'
 ?>
 
   </div>
-</div>
 </div>
 <?php $this->need('footer.php'); ?>
