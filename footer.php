@@ -1,10 +1,4 @@
-	
 </div>
-	<!-- InstantClick -->
-	
-	<script src="<?php $this->options->themeUrl('js/prism.js'); ?>"></script>	<?php $this->footer(); ?>
-	<script src="<?php $this->options->themeUrl('js/instantclick.js'); ?>" data-no-instant></script> 
-	<script data-no-instant>InstantClick.init();</script>
 	</body>
 	<footer>
 <!--<div class="footer-image"></div>-->
@@ -31,18 +25,11 @@ span_dt_dt.innerHTML="我被续了"+daysold+"天"+hrsold+"小时"+minsold+"分"+
 }
 show_date_time();
 </SCRIPT>
-<!--<script type="text/javascript">
-  WebFontConfig = {
-    google: { families: [ 'Raleway:400,200:latin' ] }
-  };
-  (function() {
-    var wf = document.createElement('script');
-    wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
-      '://ajax.googlefonts.net/ajax/libs/webfont/1/webfont.js';
-    wf.type = 'text/javascript';
-    wf.async = 'true';
-    var s = document.getElementsByTagName('script')[0];
-    s.parentNode.insertBefore(wf, s);
-  })(); </script>-->
+		<script src="<?php $this->options->themeUrl('js/prism.js'); ?>"></script>	<?php $this->footer(); ?>
 	</footer>
 </html>
+
+<!-- InstantClick -->
+
+<!--<script src="<?php $this->options->themeUrl('js/instantclick.js'); ?>" data-no-instant></script>
+<script data-no-instant>InstantClick.init();</script>-->
