@@ -20,7 +20,7 @@ function themeInit($archive)
     }
 }
 function image_class_replace($content)
-{ 
+{
   $content = preg_replace('#<a(.*?) href="([^"]*/)?(([^"/]*)\.[^"]*)"(.*?)>#',
         '<a$1 href="$2$3"$5 target="_blank">', $content);
     return $content;
