@@ -1,6 +1,9 @@
 /*BASIC~*/
 /*font-family:"Avenir Next",Avenir,"Helvetica Neue",Helvetica,"Lantinghei SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑", "STHeiti","WenQuanYi Micro Hei",SimSun,sans-serif;*/
-*{font-family: "Roboto Slab", "Helvetica Neue", Arial, "Microsoft Yahei Light", "Hiragino Sans GB", "Microsoft Yahei", "Simhei", sans-serif;text-shadow:0 1px 2px rgba(0,0,0,.15);}
+*{
+  text-shadow:0 1px 2px rgba(0,0,0,.15);
+  font-family: -apple-system,BlinkMacSystemFont,"Pingfang SC",Roboto,"Open Sans","Microsoft Yahei Light","Microsoft YaHei","Helvetica Neue",Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",sans-serif
+}
 p{
     display: block;
     -webkit-margin-before: 1em;
@@ -8,7 +11,18 @@ p{
     -webkit-margin-start: 0px;
     -webkit-margin-end: 0px;
 }
-html{}
+body:before {
+    content: " ";
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: url(https://i.loli.net/2017/08/10/598c49fd7ac2a.jpg) center 0 no-repeat;
+    background-size: cover;
+    opacity: .2;
+}
 strong{color:#FF706C}
 a{text-decoration:none;color:#999;-webkit-transition:all .24s ease;
 transition:all .24s ease;}
@@ -48,7 +62,6 @@ body{
     line-height: 1.6;
 }
 
-
 /*INDEX~*/
 .m{width:70%;margin: 0 auto;padding:60px 0;overflow:hidden;font: normal 100%;float: center;}
 .wap{margin:0 auto;overflow:hidden;}
@@ -65,10 +78,12 @@ body{
  }
 .box{
 	padding: 1.5em;
-    margin-bottom: 1em;
-    border-radius: .3em;
-    background: #FFF;
+  border-radius: .3em;
+  width: 60%;
+  -webkit-transition:all .24s ease;
+  transition:all .24s ease;
 }
+
 
 /*header~*/
 header{margin:0 auto;}
@@ -160,6 +175,7 @@ blockquote{
 	color: #999;
     font-size: .8em;
 }
+
 .tag a{
 	color: #999;
     font-size: 1em;
@@ -383,7 +399,7 @@ list-style-type:none;
     margin-bottom: 1rem;
     padding: .5rem;
 	border: 1px solid #F2F2F2;
-background-color:#F2F2F2;
+background-color:rgba(255,255,255,.4);
     border-radius: 4px;
     outline: none;
     -webkit-appearance: none;
@@ -394,8 +410,8 @@ transition:all .24s ease;
 .text:focus,
 .textarea:focus{
 	color:white;
-	border: 1px solid #666;
-background-color:#666;
+	border: 1px solid rgba(0,0,0,0.4);
+background-color:rgba(0,0,0,0.4);
 }
 
 .textarea{
@@ -453,6 +469,19 @@ input.text {
 .comments{
 	width:60%;
 	margin:0 auto;
+}
+.input{
+  width:60%;
+  border: 0;
+padding: .5em 1em .5em 2em;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+-webkit-appearance: none;
+background: #F2F2F2;
+border-radius: .5em;
+margin: 0;
+font-size: 24px;
+  outline: none;
 }
 
 /*LINK~*/
@@ -518,4 +547,5 @@ input.text {
     width:90%;
   }
   .GD{width:90%;}
+  .input{width:90%;}
 	}

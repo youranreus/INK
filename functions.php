@@ -1,10 +1,14 @@
 <?php
 
  function themeConfig($form) {
-    $logoUrl = new Typecho_Widget_Helper_Form_Element_Text('logoUrl', NULL, NULL, _t('站点LOGO地址'), _t('在这里填入一个图片URL地址, 以在网站标题前加上一个LOGO'));
-    $form->addInput($logoUrl);
-}
-//计数
+    $fav = new Typecho_Widget_Helper_Form_Element_Text('logoUrl', NULL, NULL, _t('站点LOGO地址'), _t('在这里填入一个图片URL地址, 以在网站标题前加上一个LOGO'));
+    $form->addInput($fav->addRule('xssCheck', _t('请不要在图片链接中使用特殊字符')));
+    $bkimg = new Typecho_Widget_Helper_Form_Element_Text('背景图片', NULL, NULL,_t('背景图片'), _t('想要啥背景就写这里哟'));
+    $form->addInput($bkimg->addRule('xssCheck', _t('请不要在图片链接中使用特殊字符')));
+  }
+
+
+  //计数
 function  art_count ($cid){
     $db=Typecho_Db::get ();
     $rs=$db->fetchRow ($db->select ('table.contents.text')->from ('table.contents')->where ('table.contents.cid=?',$cid)->order ('table.contents.cid',Typecho_Db::SORT_ASC)->limit (1));
@@ -20,7 +24,7 @@ function themeInit($archive)
     }
 }
 function image_class_replace($content)
-{ 
+{
   $content = preg_replace('#<a(.*?) href="([^"]*/)?(([^"/]*)\.[^"]*)"(.*?)>#',
         '<a$1 href="$2$3"$5 target="_blank">', $content);
     return $content;

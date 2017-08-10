@@ -10,19 +10,13 @@
 		<p class="over">-完-</p>
 	</center>
 	<div class="tag">
-	<center>
-
-<?php $this->author->gravatar('200'); ?>
-
-<p style="color:#999;font-size:0.5em;">@<?php echo gmdate('Y-m-d H:i:s', $this->modified + Typecho_Widget::widget('Widget_Options')->timezone); ?></p>
-
-<?php $this->tags('  ', true, '臭博主忘了贴标签'); ?>
-
-</center>
+		<center>
+			<?php $this->author->gravatar('200'); ?>
+			<p style="color:#999;font-size:0.5em;">@<?php echo gmdate('Y-m-d H:i:s', $this->modified + Typecho_Widget::widget('Widget_Options')->timezone); ?></p>
+			<?php $this->tags('  ', true, '臭博主忘了贴标签'); ?>
+		</center>
 	</div>
-	<div class="box">
+
 	<?php include('comments.php'); ?>
-	</div>
+	
 	<?php $this->need('footer.php'); ?>
-
-

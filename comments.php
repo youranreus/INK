@@ -23,12 +23,12 @@ $comments->alt(' comment-odd', ' comment-even');
 echo $commentClass;
 ?>">
     <div id="<?php $comments->theId(); ?>">
-        
+
         <div class="comment-main">
             <?php $comments->content(); ?>
             <div class="comment-meta">
 <span class="comment-author"><?php $comments->author(); ?></span>
-                <span class="comment-reply"><?php $comments->reply(); ?></span>
+                <span class="comment-reply"><?php $comments->reply('讲道理'); ?></span>
             </div>
         </div>
     </div>

@@ -2,6 +2,7 @@
 
         <?php if ($this->have()): ?>
     		<?php while($this->next()): ?>
+          <center>
     		<div class="box">
 			<center>
 			<div class="post-title">
@@ -13,6 +14,7 @@
 			</center>
 				<center><a href="<?php $this->permalink() ?>" class="go">&nbsp阅读&nbsp</a></center>
 			</div>
+    </center>
     		<?php endwhile; ?>
     	</div>
         <?php else: ?>
