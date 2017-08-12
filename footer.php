@@ -20,6 +20,7 @@
 		    container: document.getElementsByClassName('OwO')[0],
 		    target: document.getElementsByClassName('textarea')[0],
 
+
 		    api: '<?php $this->options->themeUrl('js/OwO.json'); ?>',
 
 		    position: 'up',
