@@ -5,25 +5,24 @@
  *
  * @package INK
  * @author YOURAN
- * @version 1.5
+ * @version 1.8
  * @link https://blog.mitsuha.space/
  */
 
  $this->need('header.php');
  ?>
 	<?php while($this->next()): ?>
+    <center>
 	<div class="box">
-	<center>
-
 	<div class="post-title">
 		<p><a href="<?php $this->permalink() ?>#title"><?php $this->sticky(); ?>「<?php $this->title() ?>」</a></p>
 	</div>
 	<div class="meta">
 		<span><?php echo formatTime($this->modified);?></span>
 	</div>
-	</center>
-		 <center><a href="<?php $this->permalink() ?>#title" class="go">&nbsp阅读&nbsp</a></center>
+		 <a href="<?php $this->permalink() ?>#title" class="go">&nbsp阅读&nbsp</a>
 	</div>
+</center>
 	<?php endwhile; ?>
 
 	<p style="
