@@ -23,12 +23,12 @@ $comments->alt(' comment-odd', ' comment-even');
 echo $commentClass;
 ?>">
     <div id="<?php $comments->theId(); ?>">
-        
+
         <div class="comment-main">
             <?php $comments->content(); ?>
             <div class="comment-meta">
 <span class="comment-author"><?php $comments->author(); ?></span>
-                <span class="comment-reply"><?php $comments->reply(); ?></span>
+                <span class="comment-reply"><?php $comments->reply('讲道理'); ?></span>
             </div>
         </div>
     </div>
@@ -75,6 +75,7 @@ echo $commentClass;
                 <textarea name="text" id="textarea" class="textarea" placeholder="<?php _e('评论的人最可爱~'); ?>" required ><?php $this->remember('text'); ?></textarea>
             </div>
             <div>
+              	<div class="OwO"></div>
                 <center><button type="submit" id="submit"><?php _e('走你'); ?></button></center>
             </div>
         </form>

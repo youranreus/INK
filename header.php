@@ -9,14 +9,16 @@
 	<title><?php $this->archiveTitle(' &raquo; ', '', ' | '); ?><?php $this->options->title(); ?></title>
 	<!-- css -->
 	<link href="<?php $this->options->themeUrl('css/i.css'); ?>" rel="stylesheet" />
+	<link rel="stylesheet" href="<?php $this->options->themeUrl('css/OwO.min.css'); ?>">
 	<link href="<?php $this->options->themeUrl('css/prism.css'); ?>" rel="stylesheet" />
 	<!--<link href='http://fonts.googlefonts.net/css?family=Raleway:400,200' rel='stylesheet' type='text/css'>-->
 	<!--<link href="https://cdn.bootcss.com/animate.css/3.5.2/animate.min.css" rel="stylesheet">-->
 	<!-- JS -->
 	<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
 	<script src="https://cdn.bootcss.com/jquery.pjax/2.0.1/jquery.pjax.min.js"></script>
+	<script src="<?php $this->options->themeUrl('js/instantclick.js'); ?>"></script>
 	<!--Favicon-->
-	<link rel="icon" type="image/png" href="https://blog.mitsuha.space/favicon.ico">
+	<link rel="icon" type="image/png" href="<?php $this->options->fav(); ?>">
 	<!-- 输出HTML头部信息 -->
 	<?php $this->header(); ?>
 </head>
@@ -62,6 +64,13 @@ style="border-bottom:2px solid skyblue;"
 
 
 </nav>
+		<center>
+				<form id="search" class="search-form" method="post" action="<?php $this->options->siteUrl(); ?>" role="search">
+            <span class="search-box clearfix">
+                <input type="text" id="input" class="input" name="s" required="true" placeholder="想找些啥(*/ω＼*)" maxlength="30" autocomplete="off">
+            </span>
+        </form>
+		</center>
 </div>
 
 </header>
